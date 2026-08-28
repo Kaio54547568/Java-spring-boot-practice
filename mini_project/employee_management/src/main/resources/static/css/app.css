@@ -1,0 +1,9 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; }
+body { max-width: 1050px; margin: 2rem auto; padding: 0 1rem; color: #172033; }
+nav { display: flex; gap: 1rem; margin-bottom: 2rem; }
+a { color: #2258c7; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+th, td { padding: .7rem; border-bottom: 1px solid #dce2ec; text-align: left; }
+input, select, button { padding: .6rem; margin: .25rem; }
+.error { color: #b42318; }
+.metric { display: inline-block; background: #eef4ff; padding: 1rem 2rem; border-radius: .5rem; }
