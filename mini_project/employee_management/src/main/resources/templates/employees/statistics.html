@@ -1,0 +1,5 @@
+<!doctype html><html lang="vi" xmlns:th="http://www.thymeleaf.org"><head><meta charset="utf-8"><title>Thống kê</title><link rel="stylesheet" th:href="@{/css/app.css}"></head><body>
+<nav><a th:href="@{/employees/list}">Nhân viên</a><a th:href="@{/employees/statistics}">Thống kê</a></nav><h1>Thống kê nhân viên</h1>
+<p class="metric">Tổng số nhân viên: <strong th:text="${total}"></strong></p>
+<table><thead><tr><th>Phòng ban</th><th>Số nhân viên</th></tr></thead><tbody><tr th:each="row : ${statistics}"><td th:text="${row.department}"></td><td th:text="${row.employeeCount}"></td></tr></tbody></table>
+</body></html>

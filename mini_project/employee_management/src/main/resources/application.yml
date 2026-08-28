@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: employee-management
+  profiles:
+    default: dev
+  jpa:
+    open-in-view: false
+  cache:
+    cache-names: employeeCount
+    caffeine:
+      spec: expireAfterWrite=60s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when_authorized
+
+app:
+  scheduling:
+    system-running-rate-ms: 30000

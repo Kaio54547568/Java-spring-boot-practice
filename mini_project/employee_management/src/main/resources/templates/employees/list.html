@@ -1,0 +1,7 @@
+<!doctype html><html lang="vi" xmlns:th="http://www.thymeleaf.org"><head><meta charset="utf-8"><title>Nhân viên</title><link rel="stylesheet" th:href="@{/css/app.css}"></head><body>
+<nav><a th:href="@{/employees/list}">Nhân viên</a><a th:href="@{/employees/add}">Thêm mới</a><a th:href="@{/employees/statistics}">Thống kê</a><a th:href="@{/logout}">Đăng xuất</a></nav>
+<h1>Danh sách nhân viên</h1>
+<form method="get"><input name="keyword" th:value="${keyword}" placeholder="Tên hoặc phòng ban"><button>Tìm kiếm</button></form>
+<table><thead><tr><th>Mã</th><th>Họ tên</th><th>Email</th><th>Phòng ban</th></tr></thead><tbody>
+<tr th:each="employee : ${employees}"><td th:text="${employee.code}"></td><td th:text="${employee.name}"></td><td th:text="${employee.email}"></td><td th:text="${employee.department.name}"></td></tr>
+</tbody></table></body></html>
